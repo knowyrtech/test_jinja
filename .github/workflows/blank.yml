@@ -2,11 +2,11 @@
 
 name: CI
 env:
-  msdeployutil: 'C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe'
-  value_deploy_path: 'C:\inetpub\wwwroot\qa'
-  value_pm2: 'C:\Program Files\json\pm2.cmd'
-  value_app_name: 'myapp1'
-  value_serverlist: 'remotehost'
+  msdeployutil: C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe
+  value_deploy_path: C:\inetpub\wwwroot\qa
+  value_pm2: C:\Program Files\json\pm2.cmd
+  value_app_name: myapp1
+  value_serverlist: remotehost
   
 # Controls when the workflow will run
 on:
