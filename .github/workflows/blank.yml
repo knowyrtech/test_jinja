@@ -32,7 +32,7 @@ jobs:
       - name: Execute command on remote host
 
         run: |
-          "& cmd /c ${{ env.msdeployPath }} -verb:sync -source:runcommand -dest:runcommand=cd \"${{ env.value_deploy_path }}\" && \"${{ env.value_pm2 }}" restart ${{ env.value_app_name }}\",waitinterval=200000,wmsvc='https://${{ env.value_serverlist }}:8172/msdeploy.axd?site=BackupSite',AuthType=Basic,userName=DeployDev,password='mypass' -allowUntrusted -verbose'
+          & cmd /c ${{ env.msdeployPath }} -verb:sync -source:runcommand -dest:runcommand=cd \"${{ env.value_deploy_path }}\" && \"${{ env.value_pm2 }}" restart ${{ env.value_app_name }}\",waitinterval=200000,wmsvc='https://${{ env.value_serverlist }}:8172/msdeploy.axd?site=BackupSite',AuthType=Basic,userName=DeployDev,password='mypass' -allowUntrusted -verbose'
 
       - run: |
          "& cd /c C:\inetpub\wwwroot && "C:\Program Files\json\pm2" status myapp2
